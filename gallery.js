@@ -9,6 +9,7 @@ const photos = [
     'src/photos/photo8.jpg',
     'src/photos/photo9.jpg',
     'src/photos/photo10.jpg',
+    'src/photos/photo12.png'
 ];
 
 const sizes = ['small', 'medium', 'large'];

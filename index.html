@@ -7,7 +7,10 @@
     <title>¿ sleepwalker〡Снимай. Делись. Чувствуй.</title>
     <link rel="icon" href="src/logo.svg">
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="src/animation/spotty_flower_lottie.json" as="fetch" type="application/octet-stream"
+    <link rel="preload" href="src/animations/spotty_flower_lottie.json" as="fetch" type="application/octet-stream"
+        crossorigin="anonymous">
+    <link rel="preload" href="src/animations/spotty_with_camera.json" as="fetch" type="application/octet-stream" <link
+        rel="preload" href="src/animations/spotty_with_butterfly.json" as="fetch" type="application/octet-stream"
         crossorigin="anonymous">
     <link rel="preload" href="src/photos/photo1.jpg" as="image">
     <link rel="preload" href="src/photos/photo2.jpg" as="image">
@@ -24,7 +27,7 @@
     <script defer src="cursor.js"></script>
     <script defer src="scrollbar.js"></script>
     <script defer src="gallery.js"></script>
-    <script defer src="idk.js"></script>
+    <script defer src="shit.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2/dist/dotlottie-player.mjs" type="module"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
@@ -38,7 +41,7 @@
     </div>
 
     <div class="hero">
-        <dotlottie-player src="src/animation/spotty_flower_lottie.json" background="transparent" speed="1"
+        <dotlottie-player src="src/animations/spotty_flower_lottie.json" background="transparent" speed="1"
             style="width: 300px; height: 300px;" loop autoplay>
         </dotlottie-player>
         <h1>¿ sleepwalker</h1>
@@ -51,9 +54,13 @@
 
     <div class="gallery">
         <h2>Галерея</h2>
+        <span>Посмотрите на некоторые снимки из нашего канала.</span>
         <div class="gallery-grid" id="gallery-grid"></div>
     </div>
     <div class="howitworks">
+        <dotlottie-player src="src/animations/spotty_with_butterfly.json" background="transparent" speed="1"
+            style="width: 300px; height: 300px;" loop autoplay>
+        </dotlottie-player>
         <h2>Как это работает?</h2>
         <div class="steps">
 
@@ -75,6 +82,9 @@
     </div>
 
     <div class="rules">
+        <dotlottie-player src="src/animations/spotty_with_camera.json" background="transparent" speed="1"
+            style="width: 300px; height: 300px;" loop autoplay>
+        </dotlottie-player>
         <h2>Правила отправки постов</h2>
         <div class="rules-list">
             <div class="rule">

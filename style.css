@@ -154,9 +154,8 @@ a {
 
 .gallery {
     min-height: 100vh;
-    padding: 60px 40px;
     justify-content: center;
-    gap: 32px;
+    gap: 16px;
 }
 
 .gallery-item {
@@ -236,7 +235,7 @@ footer {
     text-decoration: none;
     color: var(--text-muted, #666);
     border-radius: 1px;
-    transition: color 0.2s ease-out,
+    transition: color 0.1s ease-out,
         background-color 0.2s ease-out;
 }
 
