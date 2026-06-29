@@ -4,6 +4,11 @@
     --accent: #e63946;
 }
 
+::selection {
+    background: var(--accent);
+    color: var(--bg);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -48,7 +53,11 @@ html::-webkit-scrollbar {
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+.cursor.is-inverted {
+    background: var(--bg) !important;
 }
 
 body {
@@ -69,9 +78,25 @@ a {
     flex-direction: column;
 }
 
+.buttons-horizontal {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+}
+
 #channel {
     text-decoration: none;
     background: var(--accent);
+    border-radius: 24px;
+    padding: 12px 24px;
+}
+
+#bot {
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    background: var(--bg);
     border-radius: 24px;
     padding: 12px 24px;
 }
@@ -207,8 +232,17 @@ footer {
 }
 
 .footer-links a {
+    padding: 12px 32px;
     text-decoration: none;
     color: var(--text-muted, #666);
+    border-radius: 1px;
+    transition: color 0.2s ease-out,
+        background-color 0.2s ease-out;
+}
+
+.footer-links a:hover {
+    color: var(--text);
+    background-color: var(--accent);
 }
 
 #zenpawlabs_footer {
@@ -220,12 +254,15 @@ footer {
     transition: color 0.2s ease;
 }
 
-.footer-links a:hover {
-    color: var(--accent);
-    transition: color 0.2s ease;
-}
-
 @media (max-width: 768px) {
+
+    .buttons-horizontal {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+    }
 
     .cursor {
         display: none;
