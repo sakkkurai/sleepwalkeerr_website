@@ -211,6 +211,15 @@ footer {
     color: var(--text-muted, #666);
 }
 
+#zenpawlabs_footer {
+    text-decoration: underline;
+}
+
+#zenpawlabs_footer:hover {
+    color: var(--accent);
+    transition: color 0.2s ease;
+}
+
 .footer-links a:hover {
     color: var(--accent);
     transition: color 0.2s ease;
@@ -218,7 +227,6 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* курсор скрыть на мобилке */
     .cursor {
         display: none;
     }
@@ -227,7 +235,6 @@ footer {
         cursor: auto;
     }
 
-    /* шрифты крупнее */
     h1 {
         font-size: 36px;
     }
@@ -240,24 +247,27 @@ footer {
         font-size: 16px;
     }
 
-    /* шаги в колонку */
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .steps {
         flex-direction: column;
         gap: 32px;
     }
 
-    /* галерея — карточки шире */
     .gallery-item {
         min-width: 80vw;
         height: 45vh;
     }
 
-    /* сетка — две колонки вместо четырёх */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* меньше padding на секциях */
     .hero,
     .gallery,
     .rules,
@@ -265,7 +275,6 @@ footer {
         padding: 40px 20px;
     }
 
-    /* футер в колонку */
     footer {
         flex-direction: column;
         gap: 24px;
